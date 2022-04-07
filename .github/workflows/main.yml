@@ -9,4 +9,4 @@ jobs:
     if: github.event.discussion && !github.event.comment
     steps:
       - run: |
-          curl -X POST -d '{ "text": "Created discussion: ${{ github.event.discussion.html_url }} ${{ github.event.discussion.body }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -d '{ "text": "Created discussion: ${{ github.event.discussion.html_url }} ${{ github.event.discussion.bodyHTML }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
