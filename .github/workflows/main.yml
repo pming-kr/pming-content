@@ -1,0 +1,12 @@
+name: contribute-on-discussion
+
+on:
+  discussion:
+    types: [ created ]
+jobs:
+  discussion_created:
+    runs-on: ubuntu-latest
+    if: github.event.discussion && !github.event.comment
+    steps:
+      - run: |
+          curl -X POST -d '{ "text": "Created discussion: ${{ github.event.discussion.html_url }} ${{ github.event.discussion.body }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
