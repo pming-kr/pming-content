@@ -2,11 +2,38 @@ name: contribute-on-discussion
 
 on:
   discussion:
-    types: [ created ]
+    types: [created]
 jobs:
   discussion_created:
     runs-on: ubuntu-latest
     if: github.event.discussion && !github.event.comment && github.event.discussion.category.name == '기고채널'
     steps:
       - run: |
-          curl -X POST -d '{ "text": "새로운 기고\n${{ github.event.discussion.html_url }}\n${{ github.event.discussion.body }}\n${{ github.event.discussion.category.name }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl --location --request POST ${{ secrets.SLACK_WEBHOOK_URL }} --header 'Content-Type: application/json' --data-raw '{
+            "attachments": [
+              {
+                "pretext": "💡 새로운 기고 #${{ github.event.discussion.number }} 💡\n\n${{ github.event.discussion.lastEditedAt }}",
+                "title": "${{ github.event.discussion.title }}",
+                "title_link": "${{ github.event.discussion.url }}",
+                "color": "green",
+                "fields": [
+                  {
+                    "title": "👤 기고자",
+                    "value": "${{ github.event.discussion.author }}",
+                    "short": true
+                  },
+                  {
+                    "title": "",
+                    "value": "",
+                    "short": true
+                  },
+                  {
+                    "title": "📝 기고내용",
+                    "value": "${{ github.event.discussion.bodyText }}",
+                    "short": false
+                  }
+                ]
+              }
+            ]
+          }
+          '
