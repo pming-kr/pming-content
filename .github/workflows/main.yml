@@ -10,50 +10,71 @@ jobs:
     steps:
       - run: |
           curl --location --request POST ${{ secrets.SLACK_WEBHOOK_URL }} --header 'Content-Type: application/json' --data-raw '{
-            "attachments": [
+            "blocks": [
               {
-                "pretext": "💡 새로운 기고 #${{ github.event.discussion.number }}\n\n  ",
-                "title": "${{ github.event.discussion.title }}",
-                "title_link": "${{ github.event.discussion.html_url }}",
-                "color": "blue",
-                "fields": [
-                  {
-                    "title": "",
-                    "value": "",
-                    "short": true
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "새로운 기고 💡",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*<${{ github.event.discussion.html_url }}|#${{ github.event.discussion.number }} ${{ github.event.discussion.title }}>*"
+                },
+                "accessory": {
+                  "type": "button",
+                  "style": "primary",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "GitHub에서 확인하기",
+                    "emoji": true
                   },
+                  "value": "click_me_123",
+                  "url": "${{ github.event.discussion.html_url }}",
+                  "action_id": "button-action"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "context",
+                "elements": [
                   {
-                    "title": "",
-                    "value": "",
-                    "short": true
-                  },
-                  {
-                    "title": "👤 기고자",
-                    "value": "${{ github.event.discussion.user.login }}",
-                    "short": true
-                  },
-                  {
-                    "title": "",
-                    "value": "",
-                    "short": true
-                  },
-                  {
-                    "title": "",
-                    "value": "",
-                    "short": true
-                  },
-                  {
-                    "title": "",
-                    "value": "",
-                    "short": true
-                  },
-                  {
-                    "title": "📝 기고내용",
-                    "value": "${{ github.event.discussion.body }}",
-                    "short": false
+                    "type": "mrkdwn",
+                    "text": "기고자"
                   }
                 ]
+              },
+              {
+                "type": "context",
+                "elements": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "<${{ github.event.discussion.user.html_url }}|${{ github.event.discussion.user.login }}>"
+                  },
+                  {
+                    "type": "image",
+                    "image_url": "${{ github.event.discussion.user.avatar_url }}",
+                    "alt_text": "Contributor"
+                  }
+                ]
+              },
+              {
+                "type": "context",
+                "elements": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "${{ github.event.discussion.created_at }} 등록"
+                  }
+                ]
+              },
+              {
+                "type": "divider"
               }
             ]
-          }
-          '
+          }'
