@@ -30,7 +30,7 @@ jobs:
                   "style": "primary",
                   "text": {
                     "type": "plain_text",
-                    "text": "GitHub에서 확인하기",
+                    "text": "보러가기",
                     "emoji": true
                   },
                   "value": "click_me_123",
