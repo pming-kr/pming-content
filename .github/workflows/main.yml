@@ -12,7 +12,7 @@ jobs:
           curl --location --request POST ${{ secrets.SLACK_WEBHOOK_URL }} --header 'Content-Type: application/json' --data-raw '{
             "attachments": [
               {
-                "pretext": "💡 새로운 기고 #${{ github.event.discussion.number }} 💡\n\n${{ github.event.discussion.created_at }}",
+                "pretext": "💡 새로운 기고 #${{ github.event.discussion.number }}\n\n  ",
                 "title": "${{ github.event.discussion.title }}",
                 "title_link": "${{ github.event.discussion.html_url }}",
                 "color": "blue",
