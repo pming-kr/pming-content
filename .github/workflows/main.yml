@@ -6,7 +6,7 @@ on:
 jobs:
   discussion_created:
     runs-on: ubuntu-latest
-    if: github.event.discussion && !github.event.comment
+    if: github.event.discussion && !github.event.comment && github.event.discussion.category.name == '기고채널'
     steps:
       - run: |
-          curl -X POST -d '{ "text": "Created discussion: ${{ github.event.discussion.html_url }} ${{ github.event.discussion.body }} ${{ github.event.discussion.category.name }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -d '{ "text": "새로운 기고\n${{ github.event.discussion.html_url }}\n${{ github.event.discussion.body }}\n${{ github.event.discussion.category.name }}" }' ${{ secrets.SLACK_WEBHOOK_URL }}
