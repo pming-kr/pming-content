@@ -14,12 +14,12 @@ jobs:
               {
                 "pretext": "💡 새로운 기고 #${{ github.event.discussion.number }} 💡\n\n${{ github.event.discussion.lastEditedAt }}",
                 "title": "${{ github.event.discussion.title }}",
-                "title_link": "${{ github.event.discussion.url }}",
+                "title_link": "${{ github.event.discussion.html_url }}",
                 "color": "green",
                 "fields": [
                   {
                     "title": "👤 기고자",
-                    "value": "${{ github.event.discussion.author }}",
+                    "value": "${{ github.event.discussion.author.login }}",
                     "short": true
                   },
                   {
@@ -29,7 +29,7 @@ jobs:
                   },
                   {
                     "title": "📝 기고내용",
-                    "value": "${{ github.event.discussion.bodyText }}",
+                    "value": "${{ github.event.discussion.body }}",
                     "short": false
                   }
                 ]
