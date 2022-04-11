@@ -3,7 +3,7 @@ name: aggregate-daily-content
 on:
   push:
     branches:
-      - action-test
+      - 'action-test'
   schedule:
     - cron: "0 23 * * *"
     
