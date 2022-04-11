@@ -1,0 +1,10 @@
+name: aggregate-daily-content
+
+on:
+  schedule:
+    - cron: "0 5 * * 1-5"
+jobs:
+  aggregate_daily_content:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |

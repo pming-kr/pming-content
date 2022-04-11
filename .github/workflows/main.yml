@@ -74,6 +74,15 @@ jobs:
                 ]
               },
               {
+                "type": "context",
+                "elements": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "⭐️ 커뮤니티의 발전을 위해 요약이나 추천을 남겨주세요"
+                  }
+                ]
+              },
+              {
                 "type": "divider"
               }
             ]

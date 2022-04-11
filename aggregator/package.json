@@ -1,0 +1,20 @@
+{
+  "name": "aggregator",
+  "version": "1.0.0",
+  "description": "aggregate content on pming-content repos",
+  "main": "daily.js",
+  "scripts": {
+    "start-daily": "node ./daily.js",
+    "start-weekly": "node ./weekly.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "winterlood",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "moment-timezone": "^0.5.34",
+    "opengraph-io": "^2.0.0"
+  }
+}
