@@ -18,14 +18,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Move directory
-        run: |
-          cd aggregator
-
       - name: Install Dependencies
+        working-directory: ./aggregator
         run: | 
             npm install
             
       - name: Fire
+        working-directory: ./aggregator
         run: |
           npm run start-daily
