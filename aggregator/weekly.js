@@ -17,6 +17,10 @@ async function getWeeklyContent() {
 
 async function run() {
   const weeklyContent = await getWeeklyContent();
+  if (weeklyContent.length < 1) {
+    return;
+  }
+
   const curMoment = moment.tz("Asia/Seoul").format("MM/DD (ddd) dddd");
   const AGGREGATE_SLACK_WEBHOOK_URL = process.env.AGGREGATE_SLACK_WEBHOOK_URL;
   await postSlack(
