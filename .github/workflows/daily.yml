@@ -10,7 +10,7 @@ jobs:
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
     strategy:
       matrix:
-        node-version: [14, 16]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
