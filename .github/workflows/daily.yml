@@ -5,6 +5,10 @@ on: [push]
 jobs:
   aggregate_daily_content:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./aggregator
+      AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
+      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
     strategy:
       matrix:
         node-version: [14, 16]
