@@ -1,0 +1,31 @@
+name: aggregate-daily-content
+
+on:
+  schedule:
+    - cron: "0 23 * * 1"
+
+jobs:
+  aggregate_daily_content:
+    runs-on: ubuntu-latest
+    env:
+      AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
+      GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+    strategy:
+      matrix:
+        node-version: [16]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        working-directory: ./aggregator
+        run: |
+          npm install
+
+      - name: Fire
+        working-directory: ./aggregator
+        run: |
+          npm run start-weekly
