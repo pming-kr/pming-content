@@ -1,6 +1,8 @@
 name: aggregate-daily-content
 
-on: [push]
+on:
+    schedule:
+      - cron: "0 23 * * *"
     
 jobs:
   aggregate_daily_content:
