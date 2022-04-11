@@ -6,4 +6,3 @@ Discussion으로 오세요!
 
 https://github.com/pming-kr/pming-content/discussions
 
-테스트
