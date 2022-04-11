@@ -19,19 +19,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache node modules
-        uses: actions/cache@v2.0.0
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-      - name : Run CI
+      - name: Install Dependencies
         run: | 
-            npm ci
-      - name: Run Cron
+            npm install
+            
+      - name: Fire
         run: |
           npm run start-daily
