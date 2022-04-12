@@ -1,4 +1,4 @@
-name: aggregate-daily-content
+name: aggregate-weekly-content
 
 on:
   schedule:
