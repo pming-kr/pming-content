@@ -10,6 +10,7 @@ jobs:
     env:
       AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      OPS_ENV: production
     strategy:
       matrix:
         node-version: [16]

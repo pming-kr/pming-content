@@ -1,15 +1,16 @@
 name: aggregate-daily-content
 
 on:
-    schedule:
-      - cron: "0 23 * * *"
-    
+  schedule:
+    - cron: "0 23 * * *"
+
 jobs:
   aggregate_daily_content:
     runs-on: ubuntu-latest
     env:
       AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+      OPS_ENV: production
     strategy:
       matrix:
         node-version: [16]
@@ -22,9 +23,9 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./aggregator
-        run: | 
-            npm install
-            
+        run: |
+          npm install
+
       - name: Fire
         working-directory: ./aggregator
         run: |

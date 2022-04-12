@@ -1,7 +1,7 @@
-import fetchDiscussion from "./../fetcher/fetch-discussion.js";
+import fetchAllDiscussion from "../fetcher/fetch-all-discussion.js";
 
 export default async function getDiscussionByPeriod(period) {
-  const res = await fetchDiscussion();
+  const res = await fetchAllDiscussion();
   const discussionList = res.data.data.repository.discussions.edges.map(
     (it) => it.node
   );
