@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.discussion && !github.event.comment && github.event.discussion.category.name == '기고채널'
     env:
-      AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
       OPS_ENV: production
       DISCUSSION_CATEGORY_NAME: ${{ github.event.discussion.category.name }}
