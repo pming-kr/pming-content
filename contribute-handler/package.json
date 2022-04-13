@@ -1,0 +1,16 @@
+{
+  "name": "contribute-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "winterlood",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "open-graph": "^0.2.6"
+  }
+}
