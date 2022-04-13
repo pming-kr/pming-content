@@ -11,7 +11,7 @@
 
 웹 상에 그대로 묻혀있기에 너무 아까운 멋지고 훌륭한 컨텐츠를 찾아 조명합니다.
 
-> **좋은 컨텐츠는 반드시 조명 받아야만 합니다.**
+**좋은 컨텐츠는 반드시 조명 받아야만 합니다.**
 
 <img width="551" alt="image" src="https://user-images.githubusercontent.com/46296754/163106502-dc57cb40-ea44-4fd6-992c-34af14c50f32.png">
 
