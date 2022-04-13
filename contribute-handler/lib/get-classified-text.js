@@ -1,6 +1,11 @@
 function getUrl(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
-  return text.match(urlRegex)[0];
+  const urlList = text.match(urlRegex);
+  if (urlList.length > 0) {
+    return urlList[0];
+  } else {
+    return null;
+  }
 }
 
 function getDescript(text) {
