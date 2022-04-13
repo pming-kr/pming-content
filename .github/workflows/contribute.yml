@@ -6,7 +6,7 @@ on:
 jobs:
   handle_contribute:
     runs-on: ubuntu-latest
-    if: github.event.discussion && !github.event.comment
+    if: github.event.discussion && !github.event.comment && github.event.discussion.category.name == '기고채널'
     env:
       AGGREGATE_SLACK_WEBHOOK_URL: ${{ secrets.AGGREGATE_SLACK_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
@@ -33,7 +33,6 @@ jobs:
         working-directory: ./contribute-handler
         run: |
           npm install
-
       - name: Fire
         working-directory: ./contribute-handler
         run: |

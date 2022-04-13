@@ -11,6 +11,7 @@
   "author": "winterlood",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "open-graph": "^0.2.6"
   }

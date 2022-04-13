@@ -14,6 +14,6 @@ export default async function getOpengraph(url) {
     url: url,
     title: res.title,
     thumbnail_url: res.image.url,
-    descript: res.description,
+    url_descript: res.description,
   };
 }

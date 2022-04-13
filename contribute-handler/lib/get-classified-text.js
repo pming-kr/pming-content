@@ -14,7 +14,7 @@ function getDescript(text) {
 
 export default function getClassifiedText(text) {
   return {
-    url: getUrl(text),
+    content_url: getUrl(text),
     descript: getDescript(text),
   };
 }

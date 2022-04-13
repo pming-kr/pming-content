@@ -1,0 +1,88 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "#23 네이버는 왜 그렇게 만들어졌을까?",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "*<https://www.nvaer.com|🔗 기고 링크 (여기서 컨텐츠를 볼 수 있어요!)>*"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "image",
+          "image_url": "https://avatars.githubusercontent.com/u/46296754?s=64&v=4",
+          "alt_text": "Contributor"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "<https://www.nvaer.com|Winterlood> 기고"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "OKKY에서 주관한 2월의 세미나 \"React가 처음인 당신\"의 세미나 영상 자료 입니다\nReact.js를 말로만\n들어보았거나, 관심만 있으신 분들을 위한 영상으로 React.js를 왜 배워야 하고 배워서 어디에 써먹을 수 있는지 자세히 다룹니다.\n영상 길이가 꽤 길지만 중간중간 스킵 하시면서 들어주세용 😀\n"
+      }
+    },
+    {
+      "type": "image",
+      "image_url": "https://i1.wp.com/thetempest.co/wp-content/uploads/2017/08/The-wise-words-of-Michael-Scott-Imgur-2.jpg?w=1024&ssl=1",
+      "alt_text": "inspiration"
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "style": "primary",
+          "text": {
+            "type": "plain_text",
+            "text": "컨텐츠 보러가기",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "action_id": "actionId-0"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "기고자 GitHub",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "action_id": "actionId-1"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "⭐️ 커뮤니티의 발전을 위해 요약이나 추천을 남겨주세요"
+        }
+      ]
+    }
+  ]
+}

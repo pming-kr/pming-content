@@ -1,5 +1,4 @@
 export default function getDiscussionData() {
-  console.log("discussion body : ", process.env.DISCUSSION_BODY);
   return {
     number: process.env.DISCUSSION_NUMBER,
     category_name: process.env.DISCUSSION_CATEGORY_NAME,
