@@ -12,14 +12,6 @@ jobs:
           curl --location --request POST ${{ secrets.SLACK_WEBHOOK_URL }} --header 'Content-Type: application/json' --data-raw '{
             "blocks": [
               {
-                "type": "header",
-                "text": {
-                  "type": "plain_text",
-                  "text": "새로운 기고 💡",
-                  "emoji": true
-                }
-              },
-              {
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
