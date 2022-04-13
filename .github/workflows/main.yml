@@ -15,7 +15,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*<${{ github.event.discussion.html_url }}|#${{ github.event.discussion.number }} "${{ github.event.discussion.title }}">*"
+                  "text": "*<${{ github.event.discussion.html_url }}|#${{ github.event.discussion.number }} ${{ github.event.discussion.title }}>*"
                 },
                 "accessory": {
                   "type": "button",
