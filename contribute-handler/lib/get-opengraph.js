@@ -18,13 +18,20 @@ function convertValidUrl(url) {
   }
 }
 
-function buildThumbnail(url) {
+function buildThumbnail(image) {
+  const default_image =
+    "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da";
+  if (!image) {
+    return default_image;
+  }
+
+  const url = image.url;
   if (typeof url === "string") {
     return convertValidUrl(url);
   } else if (Array.isArray(url)) {
     return convertValidUrl(url[0]);
   } else {
-    return "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da";
+    return default_image;
   }
 }
 
@@ -38,7 +45,7 @@ export default async function getOpengraph(url) {
     };
   }
   const res = await extractOpengraph(url);
-  const thumbnail_url = buildThumbnail(res.image.url);
+  const thumbnail_url = buildThumbnail(res.image);
   return {
     url: url,
     title: res.title,
