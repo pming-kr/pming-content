@@ -8,7 +8,13 @@ dotenv.config();
 async function getDailyContent() {
   const dailyDiscussion = await getDiscussionByPeriod("daily");
   dailyDiscussion.sort((a, b) => {
-    a.upvoteCount - b.upvoteCount;
+    if (b.upvoteCount > a.upvoteCount) {
+      return 1;
+    } else if (b.upvoteCount < a.upvoteCount) {
+      return -1;
+    } else {
+      return 0;
+    }
   });
   return dailyDiscussion.slice(0, 5);
 }

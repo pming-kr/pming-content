@@ -11,7 +11,13 @@ async function getWeeklyContent() {
     (it) => it.upvoteCount >= 1
   );
   weeklyTopDiscussion.sort((a, b) => {
-    a.upvoteCount - b.upvoteCount;
+    if (b.upvoteCount > a.upvoteCount) {
+      return 1;
+    } else if (b.upvoteCount < a.upvoteCount) {
+      return -1;
+    } else {
+      return 0;
+    }
   });
   return weeklyTopDiscussion.slice(0, 5);
 }
