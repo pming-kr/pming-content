@@ -46,7 +46,7 @@
 
 프밍 Slack에 참여하여 함께해요!
 
-[슬랙 참여 링크 - https://join.slack.com/t/pmingkr/shared_invite/zt-15y6rq8wj-ssVGY3KXzk4nZ3qbSDJrfg](https://join.slack.com/t/pmingkr/shared_invite/zt-15y6rq8wj-ssVGY3KXzk4nZ3qbSDJrfg)
+[슬랙 참여 링크](https://join.slack.com/t/pmingkr/shared_invite/zt-17kp4j1ok-YJvqy_SZdtlI1tnxyxwtpQ)
 
 
 ### 1. 실시간 기고 알림
