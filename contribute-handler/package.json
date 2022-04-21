@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
-    "open-graph": "^0.2.6"
+    "open-graph": "^0.2.6",
+    "twitter": "^1.7.1"
   }
 }
