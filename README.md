@@ -1,5 +1,6 @@
 [![pming-thumbnail](https://user-images.githubusercontent.com/46296754/163120856-ceaf0083-3ef4-4401-9755-129ea493ee7d.png)](https://github.com/pming-kr/pming-content/discussions)
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fpming-kr%2Fpming-content&count_bg=%2303D6D9&title_bg=%2300E9DF&icon=&icon_color=%2308E0E6&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
  
 안녕하세요 👋 개발자들을 위한 유익한 컨텐츠를 수집하는 프밍 컨텐츠입니다.
 
