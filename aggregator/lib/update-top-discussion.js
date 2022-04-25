@@ -17,14 +17,27 @@ export default async function run(contentList, period, curMoment) {
 
   // build contents
   const newContentList = contentList
-    .map((it, idx) => `- ${idx + 1}등 : [${it.title}](${it.url})`)
-    .join("\n\n");
+    .map(
+      (it, idx) =>
+        `| ${idx + 1}등 | ${it.upvoteCount} |  <img src='${
+          it.thumbnail_url
+        }' width='120px' height='70px' />  | [${it.title}](${
+          it.url
+        })<br/> ${new Date(
+          it.createdAt
+        ).toLocaleDateString()} 작성 |  <img src='${
+          it.author.avatarUrl
+        }' width='30px' /><br/> @${it.author.login} |`
+    )
+    .join("\n");
+
   let newBody = ``;
+  const commonTableHead = `| Rank | 👍 | Thumbnail | Title | Contributor |\n|--|--|--|--|--|`;
   if (period === "daily") {
-    let newDailyBody = `## 🌱 Daily Content\n${newContentList}<br/><br/>`;
+    let newDailyBody = `## 🌱 Daily Content\n${commonTableHead}\n${newContentList}<br/><br/>`;
     newBody = [newCommonBody, newDailyBody, weeklyBody].join("&nbsp;\n");
   } else {
-    let newWeeklyBody = `## 🌳 Weekly Content\n${newContentList}<br/><br/>`;
+    let newWeeklyBody = `## 🌳 Weekly Content\n${commonTableHead}\n${newContentList}<br/><br/>`;
     newBody = [newCommonBody, dailyBody, newWeeklyBody].join("&nbsp;\n");
   }
 

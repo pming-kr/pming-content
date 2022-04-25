@@ -15,6 +15,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "moment-timezone": "^0.5.34",
+    "open-graph": "^0.2.6",
     "opengraph-io": "^2.0.0"
   }
 }
