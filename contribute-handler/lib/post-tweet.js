@@ -1,7 +1,7 @@
 import Twitter from "twitter";
 
 export default async function postTweet(discussionData) {
-  const { number, category_name, url, title, created_at, user } =
+  const { id, number, category_name, url, title, created_at, user } =
     discussionData;
 
   const text = `
@@ -11,7 +11,7 @@ export default async function postTweet(discussionData) {
 
   ${title}
 
-  ${url}
+  https://pming.kr/c/${id}
 `;
 
   const client = new Twitter({

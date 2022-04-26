@@ -1,5 +1,6 @@
 export default function getDiscussionData() {
   return {
+    id: process.env.DISCUSSION_ID,
     number: process.env.DISCUSSION_NUMBER,
     category_name: process.env.DISCUSSION_CATEGORY_NAME,
     url: process.env.DISCUSSION_URL,
