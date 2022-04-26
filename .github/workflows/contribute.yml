@@ -11,7 +11,7 @@ jobs:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
       OPS_ENV: production
-      DISCUSSION_ID: ${{ github.event.discussion.id }}
+      DISCUSSION_ID: ${{ github.event.discussion.node_id }}
       DISCUSSION_CATEGORY_NAME: ${{ github.event.discussion.category.name }}
       DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
       DISCUSSION_URL: ${{ github.event.discussion.html_url }}
