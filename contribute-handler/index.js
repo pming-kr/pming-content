@@ -22,7 +22,7 @@ async function run() {
   console.log("🌱 4. post community channels");
   const [slack_res, tweet_res] = await Promise.allSettled([
     postSlack(discussionData, contentData, ogData),
-    postTweet(discussionData),
+    postTweet(discussionData, contentData),
   ]);
   console.log(JSON.stringify(slack_res, null, 2), +"\n\n");
   console.log(JSON.stringify(tweet_res, null, 2), +"\n\n");

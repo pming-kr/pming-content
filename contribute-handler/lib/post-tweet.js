@@ -1,18 +1,13 @@
 import Twitter from "twitter";
 
-export default async function postTweet(discussionData) {
+export default async function postTweet(discussionData, contentData) {
   const { id, number, category_name, url, title, created_at, user } =
     discussionData;
+  const { descript } = contentData;
 
-  const text = `
-  #개발자 #개발컨텐츠 #프로그래머
+  const text = `https://pming.kr/c/${id}?utm_source=twitter_pming ${descript}`;
 
-  ${number}번째 기고
-
-  ${title}
-
-  https://pming.kr/c/${id}
-`;
+  const tweetText = text.slice(0, 139);
 
   const client = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_API_KEY,
@@ -25,7 +20,7 @@ export default async function postTweet(discussionData) {
     client.post(
       "statuses/update",
       {
-        status: text,
+        status: tweetText,
       },
       function (error, tweet) {
         if (!error) {

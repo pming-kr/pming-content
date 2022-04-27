@@ -2,9 +2,13 @@ function getUrl(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const urlList = text.match(urlRegex);
   if (urlList.length > 0) {
-    return urlList[0];
+    let content_url = urlList[0];
+    if (content_url[content_url.length - 1] === ")") {
+      content_url = content_url.slice(0, -1);
+    }
+    return content_url;
   } else {
-    return null;
+    return "";
   }
 }
 
