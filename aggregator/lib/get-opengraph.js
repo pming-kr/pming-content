@@ -23,7 +23,7 @@ function convertValidUrl(url) {
 
 function buildThumbnail(image) {
   const default_image =
-    "https://user-images.githubusercontent.com/46296754/163120856-ceaf0083-3ef4-4401-9755-129ea493ee7d.png";
+    "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da";
   if (!image) {
     return default_image;
   }
@@ -43,7 +43,7 @@ export default async function getOpengraph(url) {
     return {
       url: url,
       thumbnail_url:
-        "https://user-images.githubusercontent.com/46296754/163120856-ceaf0083-3ef4-4401-9755-129ea493ee7d.png",
+        "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da",
       url_descript: "\b",
     };
   }
@@ -54,7 +54,7 @@ export default async function getOpengraph(url) {
     return {
       url: url,
       thumbnail_url:
-        "https://user-images.githubusercontent.com/46296754/163120856-ceaf0083-3ef4-4401-9755-129ea493ee7d.png",
+        "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da",
       url_descript: "\b",
     };
   }

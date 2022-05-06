@@ -2,7 +2,10 @@ import og from "open-graph";
 
 function extractOpengraph(url) {
   return new Promise((resolve, reject) => {
-    og(url, (err, meta) => {
+    og(encodeURI(url), (err, meta) => {
+      if (err) {
+        reject(err);
+      }
       resolve(meta);
     });
   });
@@ -40,11 +43,22 @@ export default async function getOpengraph(url) {
     return {
       url: url,
       thumbnail_url:
-        "https://user-images.githubusercontent.com/46296754/163114733-f29bea0a-3b19-4922-b02d-be22132b9df4.png",
+        "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da",
       url_descript: "\b",
     };
   }
-  const res = await extractOpengraph(url);
+  const res = await extractOpengraph(url)
+    .then((res) => res)
+    .catch(() => "ERR");
+  if (res === "ERR") {
+    return {
+      url: url,
+      thumbnail_url:
+        "https://repository-images.githubusercontent.com/478819701/96595a41-1f34-47c7-a35f-915c014525da",
+      url_descript: "\b",
+    };
+  }
+
   const thumbnail_url = buildThumbnail(res.image);
   return {
     url: url,

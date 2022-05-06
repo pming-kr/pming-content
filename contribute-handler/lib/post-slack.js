@@ -9,10 +9,12 @@ export default async function postSlack(
     process.env.OPS_ENV === "local"
       ? process.env.TEST_SLACK_WEBHOOK_URL
       : process.env.SLACK_WEBHOOK_URL;
-  const { number, category_name, url, title, created_at, user } =
+  const { id, number, category_name, url, title, created_at, user } =
     discussionData;
   const { content_url, descript } = contentData;
   const { thumbnail_url, url_descript } = openGraphData;
+
+  const pming_url = `https://pming.kr/c/${id}?utm_source=slack_pming`;
 
   const data = {
     blocks: [
@@ -71,7 +73,7 @@ export default async function postSlack(
               emoji: true,
             },
             value: "click_me_123",
-            url: url,
+            url: pming_url,
             action_id: "actionId-0",
           },
           {

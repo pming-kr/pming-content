@@ -9,6 +9,7 @@ jobs:
     if: github.event.discussion && !github.event.comment && github.event.discussion.category.name == '기고채널'
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      JAPIER_ALARM_WEBHOOK_URL: ${{ secrets.JAPIER_ALARM_WEBHOOK_URL }}
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
       OPS_ENV: production
       DISCUSSION_ID: ${{ github.event.discussion.node_id }}

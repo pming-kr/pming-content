@@ -2,7 +2,7 @@ name: aggregate-weekly-content
 
 on:
   schedule:
-    - cron: "0 23 * * 1"
+    - cron: "* 0 * * 1"
 
 jobs:
   aggregate_daily_content:

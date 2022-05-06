@@ -9,7 +9,12 @@ function getUrl(text) {
 }
 
 function getDescript(text) {
-  const splitedText = text.split("TL;DR");
+  let splitedText = "";
+  if (text.includes("TL;DR")) {
+    splitedText = text.split("TL;DR");
+  } else if (text.includes("TL; DR")) {
+    splitedText = text.split("TL; DR");
+  }
   if (splitedText.length > 0) {
     return splitedText[1];
   } else {
