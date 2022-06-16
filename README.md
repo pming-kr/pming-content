@@ -69,3 +69,13 @@
 
 ---
 
+
+
+[![image](https://user-images.githubusercontent.com/46296754/174008528-3d59edd6-9385-41be-928d-0e1d56a86fc6.png)](https://www.in-it.io?utm_source=pming)
+
+성장할 수 있는 환경을 찾고 계신가요?
+지금 바로 인잇의 파트너사를 확인해보세요😉
+
+한 번의 간편 지원으로, 선별된 스타트업들이 당신에게 찾아옵니다!
+프밍 여러분에게는 채용 보상금 OO만원까지 지급하니, 이 기회를 놓치지 마세요!
+
