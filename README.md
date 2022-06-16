@@ -1,5 +1,8 @@
 [![pming-thumbnail](https://user-images.githubusercontent.com/46296754/163120856-ceaf0083-3ef4-4401-9755-129ea493ee7d.png)](https://github.com/pming-kr/pming-content/discussions)
 
+[![image](https://user-images.githubusercontent.com/46296754/174008528-3d59edd6-9385-41be-928d-0e1d56a86fc6.png)](https://www.in-it.io?utm_source=pming)
+
+
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fpming-kr%2Fpming-content&count_bg=%2303D6D9&title_bg=%2300E9DF&icon=&icon_color=%2308E0E6&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
  
 안녕하세요 👋 개발자들을 위한 유익한 컨텐츠를 수집하는 프밍 컨텐츠입니다.
@@ -71,11 +74,6 @@
 
 
 
-[![image](https://user-images.githubusercontent.com/46296754/174008528-3d59edd6-9385-41be-928d-0e1d56a86fc6.png)](https://www.in-it.io?utm_source=pming)
 
-성장할 수 있는 환경을 찾고 계신가요?
-지금 바로 인잇의 파트너사를 확인해보세요😉
 
-한 번의 간편 지원으로, 선별된 스타트업들이 당신에게 찾아옵니다!
-프밍 여러분에게는 채용 보상금 OO만원까지 지급하니, 이 기회를 놓치지 마세요!
 
