@@ -101,6 +101,15 @@ export default async function postSlack(
       {
         type: "divider",
       },
+      {
+        type: "context",
+        elements: [
+          {
+            type: "mrkdwn",
+            text: `<https://www.in-it.io?utm_source=pming|👉 인잇을 통해 개발자 채용을 제안 받을 수 있어요(현재 지원금 이벤트 중!)>`,
+          },
+        ],
+      },
     ],
   };
 

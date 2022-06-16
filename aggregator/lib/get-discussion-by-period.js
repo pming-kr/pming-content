@@ -7,7 +7,7 @@ export default async function getDiscussionByPeriod(period) {
   const discussionList = res.data.data.repository.discussions.edges.map(
     (it) => it.node
   );
-  const periodDate = period === "daily" ? 2 : period === "week" ? 7 : 31;
+  const periodDate = period === "daily" ? 2 : period === "week" ? 7 : 21;
 
   const filteredDiscussionList = discussionList.reduce((acc, it) => {
     const createDate = new Date(it.createdAt);
